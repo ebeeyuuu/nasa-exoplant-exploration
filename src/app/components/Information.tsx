@@ -13,7 +13,7 @@ const Information = () => {
   }, [educationLevel, setEducationLevel]);
 
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center mt-80">
+    <div className="w-full h-full flex flex-col justify-center items-center mt-80 relative">
       {educationLevel === "Primary" && <Primary />}
       {educationLevel === "Upper Secondary" && <UpperSecondary />}
       {educationLevel === "Lower Secondary" && <LowerSecondary />}

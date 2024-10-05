@@ -1,5 +1,4 @@
 import React from "react";
-import BackgroundBeams from "./Hero/BackgroundBeams";
 import useEducation from "@/context/educationContext";
 import Image from "next/image";
 import earth from "@/images/earth.png";
@@ -9,7 +8,6 @@ const Hero = () => {
 
   return (
     <div className="flex relative flex-col w-full h-full justify-center items-center">
-      <BackgroundBeams className="absolute top-0 -z-10" />
       <div className="text-4xl md:text-5xl lg:text-6xl text-center flex justify-center items-center flex-col font-extrabold mt-32 md:mt-40 lg:mt-52">
         <span className="block">Exploring</span>
         <span className="block">Exoplanets!</span>
@@ -87,11 +85,14 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <Image
-        src={earth}
-        alt="earth"
-        className="w-[100vw] h-auto object-cover absolute top-96 left-0 -z-20"
-      />
+      <div className="flex flex-col w-full h-full relative">
+        <Image
+          src={earth}
+          alt="earth"
+          className="w-[100vw] h-auto object-cover absolute top-96 left-0 z-10"
+        />
+        <div className="absolute top-96 w-full h-[100vh] bg-black z-0"> </div>
+      </div>
     </div>
   );
 };
