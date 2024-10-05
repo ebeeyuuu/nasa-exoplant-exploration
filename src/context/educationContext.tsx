@@ -14,7 +14,7 @@ export const EducationProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [educationLevel, setEducationLevel] = useState<string>("primary");
+  const [educationLevel, setEducationLevel] = useState<string>("");
 
   return (
     <EducationContext.Provider value={{ educationLevel, setEducationLevel }}>

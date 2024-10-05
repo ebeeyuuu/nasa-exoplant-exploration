@@ -10,8 +10,10 @@ const Home = () => {
   return (
     <Suspense fallback={<Loader />}>
       <EducationProvider>
-        <Hero />
-        <Information />
+        <div className="w-full h-full scrollbar-hide">
+          <Hero />
+          <Information />
+        </div>
       </EducationProvider>
     </Suspense>
   );

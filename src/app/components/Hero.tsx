@@ -8,7 +8,7 @@ const Hero = () => {
   const { setEducationLevel } = useEducation();
 
   return (
-    <div className="flex relative flex-col w-full h-full justify-center items-center scrollbar-hide">
+    <div className="flex relative flex-col w-full h-full justify-center items-center">
       <BackgroundBeams className="absolute top-0 -z-10" />
       <div className="text-4xl md:text-5xl lg:text-6xl text-center flex justify-center items-center flex-col font-extrabold mt-32 md:mt-40 lg:mt-52">
         <span className="block">Exploring</span>
@@ -31,7 +31,7 @@ const Hero = () => {
             </ul>
           </div>
           <button
-            className="bg-black border border-zinc-500 hover:scale-105 scale-100 smooth-animation rounded-xl px-5 py-3 text-sm font-light"
+            className="bg-black border-2 border-zinc-500 hover:scale-105 scale-100 smooth-animation rounded-xl px-5 py-3 text-sm font-medium"
             onClick={() => setEducationLevel("Primary")}
           >
             See material
@@ -55,7 +55,7 @@ const Hero = () => {
             </ul>
           </div>
           <button
-            className="bg-black border border-zinc-500 hover:scale-105 scale-100 smooth-animation rounded-xl px-5 py-3 text-sm font-light"
+            className="bg-black border-2 border-zinc-500 hover:scale-105 scale-100 smooth-animation rounded-xl px-5 py-3 text-sm font-medium"
             onClick={() => setEducationLevel("Lower Secondary")}
           >
             See material
@@ -80,7 +80,7 @@ const Hero = () => {
             </ul>
           </div>
           <button
-            className="bg-black border border-zinc-500 hover:scale-105 scale-100 smooth-animation rounded-xl px-5 py-3 text-sm font-light"
+            className="bg-black border-2 border-zinc-500 hover:scale-105 scale-100 smooth-animation rounded-xl px-5 py-3 text-sm font-medium"
             onClick={() => setEducationLevel("Upper Secondary")}
           >
             See material
@@ -90,7 +90,7 @@ const Hero = () => {
       <Image
         src={earth}
         alt="earth"
-        className="w-full h-full object-cover absolute top-[30vh] -z-[5] mr-4 mt-24"
+        className="w-[100vw] h-auto object-cover absolute top-96 left-0 -z-20"
       />
     </div>
   );
