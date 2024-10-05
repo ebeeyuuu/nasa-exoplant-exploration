@@ -3,6 +3,7 @@ import useEducation from "@/context/educationContext";
 import { informationByLevel } from "@/data";
 import { EducationInfo } from "@/data/types";
 import Image from "next/image"; // Import Image from Next.js
+import Xarrow from "react-xarrows"; // Import Xarrow
 
 const Information = () => {
   const { educationLevel, setEducationLevel } = useEducation();
@@ -31,7 +32,10 @@ const Information = () => {
             <span className="block">Students</span>
           </h2>
           <div className="w-full flex justify-center items-center mt-4 flex-row gap-10 p-10 max-w-[1000px]">
-            <div className="shadow-2xl shadow-zinc-700 rounded-xl text-sm p-8 flex flex-col gap-4 bg-zinc-900">
+            <div
+              id="box1"
+              className="shadow-2xl shadow-zinc-700 rounded-xl text-sm p-8 flex flex-col gap-4 bg-zinc-900"
+            >
               <p className="font-medium">{selectedInfo?.info1}</p>
               <p className="font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
@@ -51,7 +55,10 @@ const Information = () => {
             )}
           </div>
           <div className="w-3/4 mx-auto flex justify-center mt-4 items-center flex-row gap-10 px-10 max-w-[750px]">
-            <div className="shadow-2xl shadow-zinc-700 rounded-xl text-sm p-8 flex bg-zinc-900 flex-col gap-4">
+            <div
+              id="box2"
+              className="shadow-2xl shadow-zinc-700 rounded-xl text-sm p-8 flex bg-zinc-900 flex-col gap-4"
+            >
               <p className="font-medium">{selectedInfo?.info2}</p>
               <p className="font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
@@ -66,12 +73,15 @@ const Information = () => {
             {selectedInfo?.secondimage && (
               <Image
                 src={selectedInfo.secondimage.src}
-                alt="First Image"
+                alt="Second Image"
                 width={300}
                 height={300}
               />
             )}
-            <div className="shadow-2xl shadow-zinc-700 rounded-xl text-sm p-8 flex bg-zinc-900 flex-col gap-4">
+            <div
+              id="box3"
+              className="shadow-2xl shadow-zinc-700 rounded-xl text-sm p-8 flex bg-zinc-900 flex-col gap-4"
+            >
               <p className="font-medium">{selectedInfo?.info3}</p>
               <p className="font-light">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
@@ -89,6 +99,21 @@ const Information = () => {
               Your browser does not support the video tag.
             </video>
           )}
+
+          <Xarrow
+            start="box1"
+            end="box2"
+            color="#666666" // Set the color of the arrow
+            strokeWidth={2} // Set the thickness of the arrow
+            headSize={0} // Set the size of the arrowhead
+          />
+          <Xarrow
+            start="box2"
+            end="box3"
+            color="#666666" // You can set different colors for different arrows
+            strokeWidth={2}
+            headSize={0}
+          />
         </>
       ) : (
         <p>No education level selected. Please select an education level.</p>
