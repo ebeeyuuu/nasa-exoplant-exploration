@@ -1,30 +1,35 @@
-import { useState, useEffect } from "react";
+import { createContext, useContext, useState } from "react";
 
-const EDUCATION_LEVEL_KEY = "educationlevel";
+interface EducationContextType {
+  educationLevel: string;
+  setEducationLevel: (level: string) => void;
+}
 
-type EducationLevel = "Primary" | "Lower Secondary" | "Upper Secondary";
+const EducationContext = createContext<EducationContextType | undefined>(
+  undefined,
+);
 
-const useEducation = () => {
-  const [educationLevel, setEducationLevel] = useState<EducationLevel | null>(
-    null,
+export const EducationProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  const [educationLevel, setEducationLevel] = useState<string>("primary");
+
+  return (
+    <EducationContext.Provider value={{ educationLevel, setEducationLevel }}>
+      {children}
+    </EducationContext.Provider>
   );
+};
 
-  useEffect(() => {
-    const storedEducationLevel = localStorage.getItem(
-      EDUCATION_LEVEL_KEY,
-    ) as EducationLevel | null;
-    if (storedEducationLevel) {
-      setEducationLevel(storedEducationLevel);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (educationLevel) {
-      localStorage.setItem(EDUCATION_LEVEL_KEY, educationLevel);
-    }
-  }, [educationLevel]);
-
-  return { educationLevel, setEducationLevel };
+// Hook to use the EducationContext
+const useEducation = (): EducationContextType => {
+  const context = useContext(EducationContext);
+  if (!context) {
+    throw new Error("useEducation must be used within an EducationProvider");
+  }
+  return context;
 };
 
 export default useEducation;

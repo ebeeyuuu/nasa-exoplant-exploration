@@ -51,7 +51,7 @@ const PopupMenu: React.FC<PopupMenuProps> = ({
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 0.2 } }}
           transition={{ duration: 0.2 }}
-          className="absolute transform z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 min-w-[50vw] mt-[450px]"
+          className="absolute transform z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 min-w-[50vw] "
         >
           <button
             onClick={onClose}
