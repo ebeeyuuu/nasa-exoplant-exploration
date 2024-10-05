@@ -12,7 +12,7 @@ const Home = () => {
     <Suspense fallback={<Loader />}>
       <EducationProvider>
         <div className="w-full h-full scrollbar-hide">
-          <BackgroundBeams className="absolute top-0 -z-10" />
+          <BackgroundBeams className="absolute top-0 -z-10 h-[100vh] max-sm:h-[50vh] w-full" />
           <Hero />
           <Information />
         </div>

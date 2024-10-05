@@ -89,9 +89,11 @@ const Hero = () => {
         <Image
           src={earth}
           alt="earth"
-          className="w-[100vw] h-auto object-cover absolute top-96 left-0 z-10"
+          className="w-[100vw] h-auto object-cover absolute max-md:top-[-50px] top-32 left-0 -z-[5]"
         />
-        <div className="absolute top-96 w-full h-[100vh] bg-black z-0"> </div>
+        <div className="absolute top-[30vh] w-full h-[70vh] bg-black -z-[8]">
+          {" "}
+        </div>
       </div>
     </div>
   );
