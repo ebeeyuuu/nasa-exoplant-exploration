@@ -28,11 +28,9 @@ const Hero = () => {
           </div>
           <div className="scale-100 max-lg:scale-[80%] smooth-animation">
             <ul>
-              <li>1. Something</li>
-              <li>2. Something</li>
-              <li>3. Something</li>
-              <li>4. Something</li>
-              <li>5. Something</li>
+              <li>1. What are exoplanets?</li>
+              <li>2. What are the types of exoplanets?</li>
+              <li>3. How are exoplanets discovered?</li>
             </ul>
           </div>
         </div>
@@ -45,11 +43,10 @@ const Hero = () => {
           </div>
           <div className="scale-100 max-lg:scale-[80%] smooth-animation">
             <ul>
-              <li>1. Something</li>
-              <li>2. Something</li>
-              <li>3. Something</li>
-              <li>4. Something</li>
-              <li>5. Something</li>
+              <li>1. What are exoplanets?</li>
+              <li>2. Types of exoplanets</li>
+              <li>3. Finding exoplanets</li>
+              <li>4. Characterising exoplanets</li>
             </ul>
           </div>
         </div>
@@ -89,12 +86,17 @@ const Hero = () => {
           onClose={() => setIsMenuOpen(false)}
           triggerRef={buttonRef}
         >
-          <div className="flex flex-col gap-y-4 italic p-5">
+          <div className="flex flex-col gap-y-4 text-sm italic p-5">
             <p>
               &quot;Exoplanet Program: Exoplanet Program.&quot; Exoplanet
               Exploration: Planets Beyond Our Solar System,
               exoplanets.nasa.gov/exep.
             </p>
+            <p>
+              What Is an Exoplanet? | NASA Space Place – NASA Science for Kids.
+              spaceplace.nasa.gov/all-about-exoplanets/en.
+            </p>
+            <p>Exoplanets - NASA Science. science.nasa.gov/exoplanets.</p>
           </div>
         </PopupMenu>
       </div>
