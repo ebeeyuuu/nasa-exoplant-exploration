@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import BackgroundBeams from "./Hero/BackgroundBeams";
 import useEducation from "@/context/educationContext";
 import LoadingButton from "./LoadingButton";
+import Image from "next/image";
+import earth from "@/images/earth.png";
+import { motion } from "framer-motion";
+import PopupMenu from "./PopupMenu";
 
 const Hero = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
   return (
-    <div className="flex flex-col w-full h-full justify-center items-center">
-      <BackgroundBeams />
+    <div className="flex relative flex-col w-full h-full justify-center items-center">
+      <BackgroundBeams className="absolute top-0 -z-10" />
       <div className="text-6xl text-center flex justify-center items-center flex-col font-extrabold mt-52">
         <span className="block">Exploring</span>
         <span className="block">Exoplanets!</span>
       </div>
       <div className="grid grid-cols-3 gap-0 h-[60vh] w-full">
-        <div className="bg-gradient-to-b from-black via-[#212121] to-black flex justify-center items-center flex-col gap-y-6">
+        <div className="flex justify-center items-center flex-col gap-y-6">
           <div className="text-xl font-bold text-center scale-100 max-lg:scale-[80%] smooth-animation">
             Primary Students
           </div>
@@ -29,7 +36,7 @@ const Hero = () => {
             </ul>
           </div>
         </div>
-        <div className="bg-gradient-to-b from-black via-[#212121] to-black flex justify-center items-center flex-col gap-y-6">
+        <div className="flex justify-center items-center flex-col gap-y-6">
           <div className="text-xl font-bold text-center scale-100 max-lg:scale-[80%] smooth-animation">
             Lower Secondary Students
           </div>
@@ -46,7 +53,7 @@ const Hero = () => {
             </ul>
           </div>
         </div>
-        <div className="bg-gradient-to-b from-black via-[#212121] to-black flex justify-center items-center flex-col gap-y-6">
+        <div className="flex justify-center items-center flex-col gap-y-6">
           <div className="text-xl font-bold text-center scale-100 max-lg:scale-[80%] smooth-animation">
             Upper Secondary Students
           </div>
@@ -63,6 +70,33 @@ const Hero = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <Image
+        src={earth}
+        alt="earth"
+        className="w-full h-full object-cover absolute top-[30vh] -z-[5] mr-4"
+      />
+      <div className="relative z-20 mt-[-60px] flex justify-center items-center">
+        <button
+          ref={buttonRef}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="bg-black border-white border text-white rounded-xl px-5 py-3 text-lg font-medium hover:scale-110 scale-100 smooth-animation mt-24"
+        >
+          See sources
+        </button>
+        <PopupMenu
+          isOpen={isMenuOpen}
+          onClose={() => setIsMenuOpen(false)}
+          triggerRef={buttonRef}
+        >
+          <div className="flex flex-col gap-y-4 italic p-5">
+            <p>
+              &quot;Exoplanet Program: Exoplanet Program.&quot; Exoplanet
+              Exploration: Planets Beyond Our Solar System,
+              exoplanets.nasa.gov/exep.
+            </p>
+          </div>
+        </PopupMenu>
       </div>
     </div>
   );
