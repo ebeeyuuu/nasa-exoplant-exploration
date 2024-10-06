@@ -8,9 +8,6 @@ import SlidePresentation from "../SlidePresentation";
 import QuestionTemplate from "../QuestionTemplate";
 import { QuestionsProvider } from "@/context/questionsContext";
 import FinalSlide from "./FinalSlide";
-import rocket from "@/images/rocket.gif";
-
-import satelite from "@/images/satelite.gif";
 
 const UpperSecondary = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -247,11 +244,9 @@ const UpperSecondary = () => {
 
         <div className="flex justify-center items-center mt-72 w-full h-auto px-10 flex-col gap-2 max-w-[1000px]">
           <div className="flex flex-row gap-4 justify-center items-center">
-            <Image src={satelite} alt="satelite" width={200} height={200} />
             <div className="text-3xl font-extrabold text-center">
               Types of exoplanets
             </div>
-            <Image src={satelite} alt="satelite" width={200} height={200} />
           </div>
           <GridHoverEffect
             items={exoplanetTypes.map((type) => ({
@@ -293,13 +288,9 @@ const UpperSecondary = () => {
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -top-3 -right-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -right-3 text-zinc-400" />
-              <Image
-                src={rocket}
-                alt="rocket"
-                width={200}
-                height={200}
-                className="rounded-full flex justify-center items-center"
-              />
+              <div className="text-base font-medium">
+                In the year 2000, the Hubble began studying the exoplanet HD 209458 b, the first extrasolar planet known to make ‘transits’ across the face of its star. Hubble became the first telescope to directly detect an exoplanet’s atmosphere and survey its make up. 
+              </div>
             </div>
 
             <div className="relative flex p-10  flex-col gap-2 justify-center items-center bg-[#101010] row-span-2 col-span-2">
@@ -396,17 +387,13 @@ const UpperSecondary = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center w-full mx-10 mt-48 h-auto max-w-[1000px] rounded-xl">
-          <video
-            controls
-            width="100%"
-            height="auto"
-            className="border border-white"
-          >
-            <source src="/videos/exoplanets-lowersec.mov" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        <Link
+          href="https://drive.google.com/file/d/18UEN0P2BvumRINHMggM1Hu5_1YtQAIW_/view?usp=sharing"
+          target="_blank"
+          className="hover:text-blue-300 hover-scale-105 transition-all duration-300 ease-in-out text-white"
+        >
+          Watch a video here (mandatory)
+        </Link>
         <div className="w-full flex justify-center items-center flex-col gap-6 h-[100vh] mt-32">
           <SlidePresentation
             numSlides={6}
