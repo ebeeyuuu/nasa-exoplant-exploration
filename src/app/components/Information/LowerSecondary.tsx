@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { exoplanetImages } from "@/data";
 import Image from "next/image";
-import { GridHoverEffect } from "./GridHoverEffect";
 import IconTemplate from "./IconTemplate";
 
 const LowerSecondary = () => {

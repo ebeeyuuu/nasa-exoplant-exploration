@@ -1,6 +1,10 @@
-import React from "react";
+import React, { SVGProps } from "react";
 
-const IconTemplate = ({ className, ...rest }: any) => {
+interface IconTemplateProps extends SVGProps<SVGSVGElement> {
+  className?: string;
+}
+
+const IconTemplate: React.FC<IconTemplateProps> = ({ className, ...rest }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
