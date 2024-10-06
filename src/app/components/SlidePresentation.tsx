@@ -78,7 +78,7 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
   };
 
   return (
-    <div className="overflow-hidden w-full h-full flex flex-col justify-center items-center max-[1000px]:ml-0 px-[15px] max-[700px]:px-[10px] max-[700px]:py-[15px] relative">
+    <div className="bg-zinc-950 overflow-hidden w-full h-full flex flex-col justify-center items-center max-[1000px]:ml-0 px-[15px] max-[700px]:px-[10px] max-[700px]:py-[15px] relative">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentIndex}
@@ -106,20 +106,6 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
           )}
         </motion.div>
       </AnimatePresence>
-
-      <div className="absolute bottom-9 left-1/2 bg-black/50 rounded-full py-3 px-5 -translate-x-1/2 z-10">
-        {Array.from({ length: numSlides }).map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 mx-px md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 md:mx-1 xl:mx-1.5 rounded-full mt-1 transition-colors duration-200 ${index === currentIndex
-                ? "bg-[#f4b034]"
-                : "bg-white hover:bg-[#f4b034]"
-              }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
     </div>
   );
 };

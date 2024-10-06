@@ -86,14 +86,14 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-col w-full h-full relative">
+        <div className="bg-gradient-to-b from-transparent to-black h-[300px] absolute top-0 -z-1">
+          {" "}
+        </div>
         <Image
           src={earth}
           alt="earth"
           className="w-[100vw] h-auto object-cover absolute max-md:top-[-50px] top-0 left-0 -z-[5]"
         />
-        <div className="absolute top-[30vh] w-full h-[70vh] bg-black -z-[8]">
-          {" "}
-        </div>
       </div>
     </div>
   );

@@ -88,7 +88,7 @@ const BackgroundBeams = React.memo(({ className }: { className?: string }) => {
   return (
     <div
       className={cn(
-        "absolute  h-full w-full inset-0  [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center",
+        "absolute bg-gradient-to-t from-transparent to-black h-full w-full inset-0  [mask-size:40px] [mask-repeat:no-repeat] flex items-center justify-center",
         className,
       )}
     >

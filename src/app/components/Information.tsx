@@ -19,7 +19,7 @@ const Information = () => {
       {educationLevel === "Lower Secondary" && <LowerSecondary />}
 
       {!educationLevel && (
-        <p>Click on the &apos;see material&apos; to start learning!</p>
+        <p>Click on the &apos;see material&apos; button to start learning!</p>
       )}
     </div>
   );
