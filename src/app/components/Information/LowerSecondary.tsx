@@ -10,8 +10,6 @@ import QuestionTemplate from "../QuestionTemplate";
 import { QuestionsProvider } from "@/context/questionsContext";
 import FinalSlide from "./FinalSlide";
 
-import astronaut from "@/images/astronaut.gif";
-
 const LowerSecondary = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -238,11 +236,9 @@ const LowerSecondary = () => {
 
         <div className="flex justify-center items-center w-full h-auto px-24 flex-col gap-2">
           <div className="flex flex-row gap-4 justify-center items-center">
-            <Image src={astronaut} alt="astronaut" width={200} height={200} />
             <div className="text-3xl font-extrabold text-center">
               Types of exoplanets
             </div>
-            <Image src={astronaut} alt="astronaut" width={200} height={200} />
           </div>
 
           <GridHoverEffect
@@ -255,17 +251,14 @@ const LowerSecondary = () => {
           <Accordion items={accordionItems} />
         </div>
 
-        <div className="flex justify-center items-center w-full mx-10 h-auto max-w-[1000px] aspect-video rounded-xl">
-          <video
-            controls
-            width="100%"
-            height="auto"
-            className="border border-white"
-          >
-            <source src="/videos/exoplanets-lowersec.mov" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        <Link
+          href="https://drive.google.com/file/d/1fIP4XFZ9SKZTXLn6_I93Ik9tRlA9JTP7/view?usp=sharing"
+          target="_blank"
+          className="hover:text-blue-300 hover-scale-105 transition-all duration-300 ease-in-out text-white"
+        >
+          Watch a video here (mandatory)
+        </Link>
+
         <div className="w-full flex justify-center items-center flex-col gap-6 h-[100vh] mt-32">
           <SlidePresentation
             numSlides={6}
