@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { exoplanetImages } from "@/data";
 import Image from "next/image";
 import IconTemplate from "./IconTemplate";
-import astronaut from "@/images/astronaut.gif";
 import { GridHoverEffect } from "./GridHoverEffect";
 import Accordion from "@/app/components/Accordion";
 
@@ -151,11 +150,9 @@ const LowerSecondary = () => {
 
       <div className="flex justify-center items-center w-full h-auto px-24 flex-col gap-2">
         <div className="flex flex-row gap-4 justify-center items-center">
-          <Image src={astronaut} alt="alien" width={300} height={200} />
           <div className="text-3xl font-extrabold text-center">
             Types of exoplanets
           </div>
-          <Image src={astronaut} alt="alien2" width={300} height={200} />
         </div>
 
         <GridHoverEffect
