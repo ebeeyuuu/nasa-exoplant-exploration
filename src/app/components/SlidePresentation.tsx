@@ -1,10 +1,17 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { ReactElement, useCallback, useRef, useState } from "react";
 
+// Define the type for slide state with specific properties
+interface SlideState {
+  content?: string; // Example property
+  isActive?: boolean; // Example property
+  // Add more properties as needed
+}
+
 interface SlidePresentationProps {
   numSlides: number;
   currentIndex: number;
-  setCurrentIndex: (index: number) => void; // Add this line
+  setCurrentIndex: (index: number) => void;
   children: ReactElement | ReactElement[];
 }
 
@@ -14,9 +21,9 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
   setCurrentIndex,
   children,
 }) => {
-  const [direction, setDirection] = useState(0); // Track the direction of the slide transition
+  const [direction, setDirection] = useState(0);
   const [loadedSlides, setLoadedSlides] = useState<number[]>([0]);
-  const slideStates = useRef<Record<number, any>>({});
+  const slideStates = useRef<Record<number, SlideState>>({}); // Update type here
 
   const getSlideContent = useCallback(
     (index: number) => {
@@ -26,14 +33,15 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
     [children],
   );
 
-  const setSlideState = useCallback((index: number, state: any) => {
+  // Update the type for the state parameter
+  const setSlideState = useCallback((index: number, state: SlideState) => {
     slideStates.current[index] = state;
   }, []);
 
   const goToSlide = (index: number) => {
     if (index !== currentIndex) {
       setDirection(index > currentIndex ? 1 : -1);
-      setCurrentIndex(index); // Use the passed setCurrentIndex function
+      setCurrentIndex(index);
       if (!loadedSlides.includes(index)) {
         setLoadedSlides((prev) => [...prev, index]);
       }
@@ -88,9 +96,10 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
           {React.isValidElement(getSlideContent(currentIndex)) ? (
             React.cloneElement(getSlideContent(currentIndex) as ReactElement, {
               slideState: slideStates.current[currentIndex] || {},
-              setSlideState: (state: any) => setSlideState(currentIndex, state),
-              onNextSlide: nextSlide, // Pass onNextSlide to children
-              onPrevSlide: prevSlide, // If you want to allow previous slide action
+              setSlideState: (state: SlideState) =>
+                setSlideState(currentIndex, state),
+              onNextSlide: nextSlide,
+              onPrevSlide: prevSlide,
             })
           ) : (
             <div>Blank Slide</div>
@@ -104,8 +113,8 @@ const SlidePresentation: React.FC<SlidePresentationProps> = ({
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 mx-px md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 md:mx-1 xl:mx-1.5 rounded-full mt-1 transition-colors duration-200 ${index === currentIndex
-              ? "bg-[#f4b034]"
-              : "bg-white hover:bg-[#f4b034]"
+                ? "bg-[#f4b034]"
+                : "bg-white hover:bg-[#f4b034]"
               }`}
             aria-label={`Go to slide ${index + 1}`}
           />
