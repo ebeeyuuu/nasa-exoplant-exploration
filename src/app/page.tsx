@@ -9,7 +9,9 @@ import { EducationProvider } from "@/context/educationContext";
 
 const Home = () => {
   return (
-    <Suspense fallback={<Loader />}>
+    <Suspense
+      fallback={<Loader primaryColorHex="#6a2bcf" accentColorHex="#00b8b8" />}
+    >
       <EducationProvider>
         <div className="w-full h-full scrollbar-hide">
           <BackgroundBeams className="absolute top-0 -z-10 h-[100vh] max-sm:h-[50vh] w-full" />
