@@ -15,6 +15,23 @@ export const exoplanetImages = [
       "It has a rocky surface, and its proximity to its star likely makes the planet too hot to support life as we know it.",
     upper_secondary_description:
       "Kepler-20e completes one full orbit in just six days and is part of a multi-planet system discovered by NASA's Kepler mission.",
+    lower_secondary_stats: {
+      radius: "0.821 Earth radii",
+      orbital_period: "6.1 days",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+    },
+    upper_secondary_stats: {
+      radius: "0.821 Earth radii",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+      discovery_year: 2011,
+      orbital_radius: "0.0637 AU",
+      orbital_period: "6.1 days",
+      eccentricity: "< 0.092",
+    },
   },
   {
     name: "Kepler-20f",
@@ -25,6 +42,23 @@ export const exoplanetImages = [
       "While it's larger than Earth, its atmosphere and surface conditions remain unknown, making it a subject of speculation for astronomers.",
     upper_secondary_description:
       "Kepler-20f is in a planetary system with several other exoplanets, offering valuable insight into the diversity of worlds around distant stars.",
+    lower_secondary_stats: {
+      radius: "0.821 Earth radii",
+      orbital_period: "6.1 days",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+    },
+    upper_secondary_stats: {
+      radius: "0.821 Earth radii",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+      discovery_year: 2011,
+      orbital_radius: "0.0637 AU",
+      orbital_period: "6.1 days",
+      eccentricity: "< 0.092",
+    },
   },
   {
     name: "Kepler-1649c",
@@ -35,6 +69,23 @@ export const exoplanetImages = [
       "It orbits its star at a distance where liquid water could potentially exist, sparking interest in its capacity to support life.",
     upper_secondary_description:
       "Kepler-1649c's star is a red dwarf, which means it may experience flare activity that could impact the planet’s habitability.",
+    lower_secondary_stats: {
+      radius: "0.821 Earth radii",
+      orbital_period: "6.1 days",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+    },
+    upper_secondary_stats: {
+      radius: "0.821 Earth radii",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+      discovery_year: 2011,
+      orbital_radius: "0.0637 AU",
+      orbital_period: "6.1 days",
+      eccentricity: "< 0.092",
+    },
   },
   {
     name: "GJ 504b",
@@ -45,6 +96,23 @@ export const exoplanetImages = [
       "This young planet is cooler than Jupiter, with methane clouds in its atmosphere that give it a unique pink hue.",
     upper_secondary_description:
       "GJ 504b's low temperature is puzzling for a planet its size, and scientists continue to study its unusual characteristics.",
+    lower_secondary_stats: {
+      radius: "0.821 Earth radii",
+      orbital_period: "6.1 days",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+    },
+    upper_secondary_stats: {
+      radius: "0.821 Earth radii",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+      discovery_year: 2011,
+      orbital_radius: "0.0637 AU",
+      orbital_period: "6.1 days",
+      eccentricity: "< 0.092",
+    },
   },
   {
     name: "HR 8799b",
@@ -55,6 +123,23 @@ export const exoplanetImages = [
       "The planet is massive and orbits far from its star, providing a good view for astronomers using direct imaging techniques.",
     upper_secondary_description:
       "HR 8799b is part of a unique planetary system with several other gas giants, all of which have been directly imaged.",
+    lower_secondary_stats: {
+      radius: "0.821 Earth radii",
+      orbital_period: "6.1 days",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+    },
+    upper_secondary_stats: {
+      radius: "0.821 Earth radii",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+      discovery_year: 2011,
+      orbital_radius: "0.0637 AU",
+      orbital_period: "6.1 days",
+      eccentricity: "< 0.092",
+    },
   },
   {
     name: "TOI 700",
@@ -65,5 +150,22 @@ export const exoplanetImages = [
       "TOI 700 d is roughly Earth-sized and orbits within a region where liquid water could exist, making it a strong candidate for further study.",
     upper_secondary_description:
       "This star system is located only 100 light-years away, offering a relatively close target for future exploration and observation.",
+    lower_secondary_stats: {
+      radius: "0.821 Earth radii",
+      orbital_period: "6.1 days",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+    },
+    upper_secondary_stats: {
+      radius: "0.821 Earth radii",
+      planet_type: "Terrestrial",
+      discovery_method: "Transit",
+      mass: "0.76 Earths",
+      discovery_year: 2011,
+      orbital_radius: "0.0637 AU",
+      orbital_period: "6.1 days",
+      eccentricity: "< 0.092",
+    },
   },
 ];
