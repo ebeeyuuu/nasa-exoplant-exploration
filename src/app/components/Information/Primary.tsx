@@ -8,6 +8,9 @@ import IconTemplate from "./IconTemplate";
 import { GridHoverEffect } from "./GridHoverEffect";
 import Accordion from "@/app/components/Accordion";
 
+import primaryVideo from "@@/videos/exoplanets-primary.mp4";
+import NextVideo from "next-video";
+
 const Primary = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -145,9 +148,10 @@ const Primary = () => {
         <Accordion items={accordionItems} />
       </div>
 
-      <div className="flex justify-center items-center w-full mx-10 h-auto max-w-[1000px] aspect-video border rounded-xl mb-96">
-        Place the video here
-      </div>
+      <NextVideo
+        src={primaryVideo}
+        className="flex justify-center items-center w-full mx-10 h-auto max-w-[1000px] aspect-video border rounded-xl mb-96"
+      />
     </div>
   );
 };

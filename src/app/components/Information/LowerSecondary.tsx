@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import { exoplanetImages } from "@/data";
 import Image from "next/image";
 import IconTemplate from "./IconTemplate";
+import astronaut from "@/images/astronaut.gif";
 import { GridHoverEffect } from "./GridHoverEffect";
+import Accordion from "@/app/components/Accordion";
 
 const LowerSecondary = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,6 +19,13 @@ const LowerSecondary = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  const accordionItems = [
+    {
+      title: "What is an astronaut's favorite key on a keyboard?",
+      content: "The space bar.",
+    },
+  ];
 
   const exoplanetTypes = [
     {
@@ -142,9 +151,11 @@ const LowerSecondary = () => {
 
       <div className="flex justify-center items-center w-full h-auto px-24 flex-col gap-2">
         <div className="flex flex-row gap-4 justify-center items-center">
+          <Image src={astronaut} alt="alien" width={300} height={200} />
           <div className="text-3xl font-extrabold text-center">
             Types of exoplanets
           </div>
+          <Image src={astronaut} alt="alien2" width={300} height={200} />
         </div>
 
         <GridHoverEffect
@@ -152,6 +163,13 @@ const LowerSecondary = () => {
             content: type.content,
           }))}
         />
+      </div>
+      <div className="p-8 flex justify-center">
+        <Accordion items={accordionItems} />
+      </div>
+
+      <div className="flex justify-center items-center w-full mx-10 h-auto max-w-[1000px] aspect-video border rounded-xl mb-96">
+        Place the video here
       </div>
     </div>
   );
