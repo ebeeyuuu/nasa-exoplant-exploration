@@ -23,7 +23,7 @@ const Primary = () => {
   const exoplanetTypes = [
     {
       content: (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center p-10">
           <div className="text-xl font-bold">Gas Giants</div>
           <p className="text-lg font-medium mt-4 text-center">
             These planets are as large as Jupiter or Saturn and can be even
@@ -35,7 +35,7 @@ const Primary = () => {
     },
     {
       content: (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center p-10">
           <div className="text-xl font-bold">Terrestrial Planets</div>
           <p className="text-lg font-medium mt-4 text-center">
             Terrestrial planets are Earth-sized or smaller and are made of rock,
@@ -46,7 +46,7 @@ const Primary = () => {
     },
     {
       content: (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center p-10">
           <div className="text-xl font-bold">Ice Giants</div>
           <p className="text-lg font-medium mt-4 text-center">
             Similar to Neptune or Uranus, these planets have hydrogen-helium
@@ -57,7 +57,7 @@ const Primary = () => {
     },
     {
       content: (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center p-10">
           <div className="text-xl font-bold">Super-Earths</div>
           <p className="text-lg font-medium mt-4 text-center">
             Super-Earths are planets more massive than Earth but lighter than
