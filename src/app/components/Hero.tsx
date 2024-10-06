@@ -62,7 +62,7 @@ const Hero = () => {
 
         <div className="flex justify-center items-center flex-col gap-y-4 md:gap-y-6 mt-6">
           <div className="text-lg md:text-xl font-bold text-center">
-            <span className="block">Upperr Secondary</span>
+            <span className="block">Upper Secondary</span>
             <span className="block">Students</span>
           </div>
           <div className="flex justify-center items-center text-base md:text-lg font-medium">
@@ -89,7 +89,7 @@ const Hero = () => {
         <Image
           src={earth}
           alt="earth"
-          className="w-[100vw] h-auto object-cover absolute max-md:top-[-50px] top-32 left-0 -z-[5]"
+          className="w-[100vw] h-auto object-cover absolute max-md:top-[-50px] top-0 left-0 -z-[5]"
         />
         <div className="absolute top-[30vh] w-full h-[70vh] bg-black -z-[8]">
           {" "}

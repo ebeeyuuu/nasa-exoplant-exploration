@@ -6,6 +6,7 @@ import alien from "@/images/alien.gif";
 import Image from "next/image";
 import IconTemplate from "./IconTemplate";
 import { GridHoverEffect } from "./GridHoverEffect";
+import Accordion from "@/app/components/Accordion";
 
 const Primary = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,6 +20,13 @@ const Primary = () => {
 
     return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
+
+  const accordionItems = [
+    {
+      title: "How do you know when the moon had enough to eat?",
+      content: "When it's full.",
+    },
+  ];
 
   const exoplanetTypes = [
     {
@@ -116,7 +124,7 @@ const Primary = () => {
         </p>
       </div>
 
-      <div className="flex justify-center items-center w-full h-auto px-24 flex-col gap-2">
+      <div className="flex justify-center items-center w-full h-auto px-10 max-w-[1000px] flex-col gap-2">
         <div className="flex flex-row gap-4 justify-center items-center">
           <Image src={alien} alt="alien" width={200} height={200} />
           <div className="text-3xl font-extrabold text-center">
@@ -129,7 +137,16 @@ const Primary = () => {
           items={exoplanetTypes.map((type) => ({
             content: type.content,
           }))}
+          color="#9cff9d"
         />
+      </div>
+
+      <div className="p-8 flex justify-center">
+        <Accordion items={accordionItems} />
+      </div>
+
+      <div className="flex justify-center items-center w-full mx-10 h-auto max-w-[1000px] aspect-video border rounded-xl mb-96">
+        Place the video here
       </div>
     </div>
   );

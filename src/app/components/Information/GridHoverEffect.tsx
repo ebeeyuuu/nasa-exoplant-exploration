@@ -5,11 +5,13 @@ import { useState } from "react";
 export const GridHoverEffect = ({
   items,
   className,
+  color = "rgba(255, 255, 255, 0.5)", // Default to white/50 equivalent in rgba
 }: {
   items: {
     content: React.ReactNode;
   }[];
   className?: string;
+  color?: string; // Corrected to `color`
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
@@ -25,7 +27,7 @@ export const GridHoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-gradient-to-br from-white/50 to-[#181818] block rounded-3xl"
+                className="absolute inset-0 h-full w-full block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -35,6 +37,9 @@ export const GridHoverEffect = ({
                 exit={{
                   opacity: 0,
                   transition: { duration: 0.15, delay: 0.2 },
+                }}
+                style={{
+                  background: `linear-gradient(to bottom right, ${color}, #000)`, // Use inline style
                 }}
               />
             )}
