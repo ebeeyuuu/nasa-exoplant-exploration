@@ -12,6 +12,8 @@ import QuestionTemplate from "../QuestionTemplate";
 import { QuestionsProvider } from "@/context/questionsContext";
 import FinalSlide from "./FinalSlide";
 
+import Link from "next/link";
+
 const Primary = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
