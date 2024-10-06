@@ -205,17 +205,13 @@ const Primary = () => {
         <div className="p-8 flex justify-center">
           <Accordion items={accordionItems} />
         </div>
-        <div className="flex justify-center items-center w-full mx-10 mt-24 h-auto max-w-[1000px] aspect-video rounded-xl">
-          <video
-            controls
-            width="100%"
-            height="auto"
-            className="border border-white"
-          >
-            <source src="/videos/exoplanets-primary.mov" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+        <Link
+          href="https://drive.google.com/file/d/1gGlAXxYGadsWJCrdR1K-n7S9ogJvyaIX/view?usp=sharing"
+          target="_blank"
+          className="hover:text-blue-300 hover-scale-105 transition-all duration-300 ease-in-out text-white"
+        >
+          Watch a video here (mandatory)
+        </Link>
         <div className="w-full flex justify-center items-center flex-col gap-6 h-[100vh] mt-32">
           <SlidePresentation
             numSlides={6}
