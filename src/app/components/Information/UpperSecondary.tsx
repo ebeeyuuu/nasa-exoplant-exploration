@@ -291,7 +291,11 @@ const UpperSecondary = () => {
               <IconTemplate className="absolute h-6 w-6 -top-3 -right-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -right-3 text-zinc-400" />
               <div className="text-base font-medium">
-                In the year 2000, the Hubble began studying the exoplanet HD 209458 b, the first extrasolar planet known to make ‘transits’ across the face of its star. Hubble became the first telescope to directly detect an exoplanet’s atmosphere and survey its make up. 
+                In the year 2000, the Hubble began studying the exoplanet HD
+                209458 b, the first extrasolar planet known to make ‘transits’
+                across the face of its star. Hubble became the first telescope
+                to directly detect an exoplanet’s atmosphere and survey its make
+                up.
               </div>
             </div>
 
@@ -386,6 +390,17 @@ const UpperSecondary = () => {
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -top-3 -right-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -right-3 text-zinc-400" />
+              <div className="flex flex-col gap-2 justify-center items-center">
+                <h2 className="text-left mb-4 text-xl font-bold">
+                  A project made by
+                </h2>
+                <div className="flex flex-col gap-2 justify-center items-center">
+                  <p>Ean James Yu</p>
+                  <p>Chanelle Gretchen Herho</p>
+                  <p>Corina Irish Yuswandhika</p>
+                  <p>Eshaal Naqvi</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
