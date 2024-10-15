@@ -407,7 +407,7 @@ const UpperSecondary = () => {
         <Link
           href="https://drive.google.com/file/d/18UEN0P2BvumRINHMggM1Hu5_1YtQAIW_/view?usp=sharing"
           target="_blank"
-          className="hover:text-blue-300 hover-scale-105 transition-all duration-300 ease-in-out text-white"
+          className="hover:text-blue-300 hover-scale-105 transition-all duration-300 ease-in-out text-white mt-96"
         >
           Watch a video here (mandatory)
         </Link>
