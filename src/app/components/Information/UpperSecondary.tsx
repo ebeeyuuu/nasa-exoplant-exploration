@@ -416,36 +416,39 @@ const UpperSecondary = () => {
                 Watch a video here (mandatory)
               </Link>
             </div>
+
+            <div className="relative flex p-14 flex-col gap-2 jsutify-center items-center col-span-3 lg:col-span-6">
+              <div className="w-full flex justify-center items-center flex-col gap-6 h-[100vh]">
+                <SlidePresentation
+                  numSlides={6}
+                  currentIndex={currentSlideIndex}
+                  setCurrentIndex={setCurrentSlideIndex}
+                >
+                  <QuestionTemplate
+                    {...questionsData[0]}
+                    onNextSlide={() => setCurrentSlideIndex(1)}
+                  />
+                  <QuestionTemplate
+                    {...questionsData[1]}
+                    onNextSlide={() => setCurrentSlideIndex(2)}
+                  />
+                  <QuestionTemplate
+                    {...questionsData[2]}
+                    onNextSlide={() => setCurrentSlideIndex(3)}
+                  />
+                  <QuestionTemplate
+                    {...questionsData[3]}
+                    onNextSlide={() => setCurrentSlideIndex(4)}
+                  />
+                  <QuestionTemplate
+                    {...questionsData[4]}
+                    onNextSlide={() => setCurrentSlideIndex(5)}
+                  />
+                  <FinalSlide />
+                </SlidePresentation>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="w-full flex justify-center items-center flex-col gap-6 h-[100vh] mt-[1000px]">
-          <SlidePresentation
-            numSlides={6}
-            currentIndex={currentSlideIndex}
-            setCurrentIndex={setCurrentSlideIndex}
-          >
-            <QuestionTemplate
-              {...questionsData[0]}
-              onNextSlide={() => setCurrentSlideIndex(1)}
-            />
-            <QuestionTemplate
-              {...questionsData[1]}
-              onNextSlide={() => setCurrentSlideIndex(2)}
-            />
-            <QuestionTemplate
-              {...questionsData[2]}
-              onNextSlide={() => setCurrentSlideIndex(3)}
-            />
-            <QuestionTemplate
-              {...questionsData[3]}
-              onNextSlide={() => setCurrentSlideIndex(4)}
-            />
-            <QuestionTemplate
-              {...questionsData[4]}
-              onNextSlide={() => setCurrentSlideIndex(5)}
-            />
-            <FinalSlide />
-          </SlidePresentation>
         </div>
       </div>
     </QuestionsProvider>
