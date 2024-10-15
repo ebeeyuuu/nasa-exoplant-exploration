@@ -259,13 +259,13 @@ const UpperSecondary = () => {
         </div>
         <div className="w-full h-[100vh] flex justify-center items-center mt-32 max-w-[3000px]">
           <div className="grid grid-cols-3 lg:grid-cols-6 gap-2 p-10 h-[100vh]">
-            <div className="relative flex p-10  flex-col gap-2 justify-center items-center bg-[#101010] row-span-2 col-span-3">
+            <div className="relative flex p-14 text-xs sm:text-sm lg:text-base flex-col gap-2 justify-center items-center bg-[#101010] row-span-2 col-span-3">
               <IconTemplate className="absolute h-6 w-6 -top-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -top-3 -right-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -right-3 text-zinc-400" />
               <div className="flex flex-col justify-center">
-                <h3 className="text-left mb-4 text-xl font-bold">
+                <h3 className="text-left mb-4 text-base md:text-lg lg:text-xl font-bold">
                   Current and Future Missions
                 </h3>
                 <ul>
@@ -285,12 +285,12 @@ const UpperSecondary = () => {
               </div>
             </div>
 
-            <div className="relative flex p-10  flex-col gap-2 justify-center items-center bg-[#101010] row-span-2 col-span-1">
+            <div className="relative flex p-14 text-xs sm:text-sm lg:text-base flex-col gap-2 justify-center items-center bg-[#101010] row-span-2 col-span-1">
               <IconTemplate className="absolute h-6 w-6 -top-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -top-3 -right-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -right-3 text-zinc-400" />
-              <div className="text-base font-medium">
+              <div className="text-xs md:text-sm lg:text-base font-medium">
                 In the year 2000, the Hubble began studying the exoplanet HD
                 209458 b, the first extrasolar planet known to make ‘transits’
                 across the face of its star. Hubble became the first telescope
@@ -299,13 +299,13 @@ const UpperSecondary = () => {
               </div>
             </div>
 
-            <div className="relative flex p-10  flex-col gap-2 justify-center items-center bg-[#101010] row-span-2 col-span-2">
+            <div className="relative flex p-14 text-xs sm:text-sm lg:text-base flex-col gap-2 justify-center items-center bg-[#101010] row-span-2 col-span-2">
               <IconTemplate className="absolute h-6 w-6 -top-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -top-3 -right-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -right-3 text-zinc-400" />
               <div className="flex flex-col justify-center">
-                <h3 className="text-left mb-4 text-xl font-bold">
+                <h3 className="text-left mb-4 text-base mmd:text-lg lg:text-xl font-bold">
                   Finding exoplanets
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -324,13 +324,13 @@ const UpperSecondary = () => {
               </div>
             </div>
 
-            <div className="relative flex p-10  flex-col gap-2 justify-center items-center bg-[#101010] row-span-3 col-span-3">
+            <div className="relative flex p-14 text-xs sm:text-sm lg:text-base flex-col gap-2 justify-center items-center bg-[#101010] row-span-3 col-span-3">
               <IconTemplate className="absolute h-6 w-6 -top-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -top-3 -right-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -right-3 text-zinc-400" />
               <div className="flex flex-col justify-center">
-                <h3 className="text-left mb-4 text-xl font-bold">
+                <h3 className="text-left mb-4 text-base md:text-lg lg:text-xl font-bold">
                   Characterizing exoplanets
                 </h3>
                 <p>
@@ -354,13 +354,13 @@ const UpperSecondary = () => {
               </div>
             </div>
 
-            <div className="relative flex p-10  flex-col gap-2 justify-center items-center bg-[#101010] row-span-3 max-md:row-span-2 col-span-2">
+            <div className="relative flex p-14 text-xs sm:text-sm lg:text-base flex-col gap-2 justify-center items-center bg-[#101010] row-span-3 max-md:row-span-2 col-span-2">
               <IconTemplate className="absolute h-6 w-6 -top-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -top-3 -right-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -right-3 text-zinc-400" />
               <div className="flex flex-col justify-center p-10">
-                <h2 className="text-left mb-4 text-xl font-bold">
+                <h2 className="text-left mb-4 text-base md:text-lg lg:text-xl font-bold">
                   NASA Exoplanet Exploration Program
                 </h2>
                 <p>
@@ -385,7 +385,7 @@ const UpperSecondary = () => {
               </div>
             </div>
 
-            <div className="relative flex p-10  flex-col gap-2 justify-center items-center bg-[#101010] row-span-3 max-md:row-span-2 col-span-1">
+            <div className="relative flex p-14 text-xs sm:text-sm lg:text-base flex-col gap-2 justify-center items-center bg-[#101010] row-span-3 max-md:row-span-2 col-span-1">
               <IconTemplate className="absolute h-6 w-6 -top-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -bottom-3 -left-3 text-zinc-400" />
               <IconTemplate className="absolute h-6 w-6 -top-3 -right-3 text-zinc-400" />
@@ -394,7 +394,7 @@ const UpperSecondary = () => {
                 <h2 className="text-left mb-4 text-xl font-bold">
                   A project made by
                 </h2>
-                <div className="flex flex-col gap-2 justify-center items-center">
+                <div className="flex flex-col gap-2 justify-center">
                   <p>Ean James Yu</p>
                   <p>Chanelle Gretchen Herho</p>
                   <p>Corina Irish Yuswandhika</p>
@@ -402,16 +402,23 @@ const UpperSecondary = () => {
                 </div>
               </div>
             </div>
+
+            <div className="relative flex p-14 text-xs sm:text-sm lg:text-base flex-col gap-2 justify-center items-center bg-[#101010] col-span-3 lg:col-span-6">
+              <IconTemplate className="absolute h-6 w-6 -top-3 -left-3 text-zinc-400" />
+              <IconTemplate className="absolute h-6 w-6 -bottom-3 -left-3 text-zinc-400" />
+              <IconTemplate className="absolute h-6 w-6 -top-3 -right-3 text-zinc-400" />
+              <IconTemplate className="absolute h-6 w-6 -bottom-3 -right-3 text-zinc-400" />
+              <Link
+                href="https://drive.google.com/file/d/18UEN0P2BvumRINHMggM1Hu5_1YtQAIW_/view?usp=sharing"
+                target="_blank"
+                className="hover:text-blue-300 w-full flex justify-center items-center hover-scale-105 transition-all duration-300 ease-in-out text-white"
+              >
+                Watch a video here (mandatory)
+              </Link>
+            </div>
           </div>
         </div>
-        <Link
-          href="https://drive.google.com/file/d/18UEN0P2BvumRINHMggM1Hu5_1YtQAIW_/view?usp=sharing"
-          target="_blank"
-          className="hover:text-blue-300 hover-scale-105 transition-all duration-300 ease-in-out text-white mt-96"
-        >
-          Watch a video here (mandatory)
-        </Link>
-        <div className="w-full flex justify-center items-center flex-col gap-6 h-[100vh] mt-32">
+        <div className="w-full flex justify-center items-center flex-col gap-6 h-[100vh] mt-[1000px]">
           <SlidePresentation
             numSlides={6}
             currentIndex={currentSlideIndex}
