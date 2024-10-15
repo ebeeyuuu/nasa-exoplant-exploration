@@ -26,10 +26,17 @@ const QuestionTemplate: React.FC<SlideProps> = ({
 
   const handleOptionClick = (index: number) => {
     setSelectedOption(index);
+
     if (options[index].isCorrect) {
+      // Increment correctAnswers only if the selected option is correct
       setCorrectAnswers(correctAnswers + 1);
     }
-    setTimeout(onNextSlide, 1000);
+
+    // Proceed to the next slide after a delay
+    setTimeout(() => {
+      onNextSlide();
+      setSelectedOption(null); // Reset selection when moving to the next question
+    }, 1000);
   };
 
   const handleShowHint = () => {
@@ -72,8 +79,7 @@ const QuestionTemplate: React.FC<SlideProps> = ({
             <button
               key={index}
               onClick={() => handleOptionClick(index)}
-              className={`flex ${isTwoWords ? "flex-col" : "flex-row"
-                } justify-center items-center rounded-xl p-10 text-sm aspect-square text-white font-bold text-wrap hover:scale-105 smooth-animation ${selectedOption === null
+              className={`flex ${isTwoWords ? "flex-col" : "flex-row"} justify-center items-center rounded-xl p-10 text-sm aspect-square text-white font-bold text-wrap hover:scale-105 smooth-animation ${selectedOption === null
                   ? "bg-gray-800"
                   : option.isCorrect
                     ? "bg-green-700"
